@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing: border-box;
+            
+        }
+        :root {
+            --image-url: url("{{ url_for('static', filename='image2.jpg') }}");
+            --image-url2: url("{{ url_for('static', filename='blood.jpg') }}");
+        }
+        body{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+           
+
+        }
+        .main-container{
+            background-image: var(--image-url);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size:cover;
+            height: 100vh;
+            
+            color:white;
+            font-weight: bold;
+            background-color: rgb(121, 121, 121);
+            background-blend-mode: multiply;
+
+            display: flex;
+           flex-direction: column;
+           justify-content: center;
+           align-items: center;
+        
+        }
+        .main-container h1{
+            font-size: 40px;
+        }
+        .crime-button , .arrest-button , .crime-button:hover , .arrest-button:hover{
+           padding:20px 40px;
+           margin:10px 10px;
+           cursor: pointer;
+           border:4px solid #d3c104;
+           background-color: rgb(1, 1, 112);
+           color:white;
+           font-size: 20px;
+
+        }
+       .footer{
+        border: 4px solid #ffb02f;
+        background-color: rgb(72, 72, 72);
+        background-blend-mode: multiply;
+     
+        background-image: var(--image-url2);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        color: white;
+        font-size:25px;
+
+       }
+       .footer h4{
+        margin:15px;
+       }
+    </style>
+</head>
+<body>
+    <div class="main-container">
+        <h1>Los Angles crime reports</h1>
+
+
+        <div class="links">
+
+            <a href="/crime" class="crime">
+                <button class="crime-button">
+                    Crime Reports
+                </button>
+            </a>
+
+            <a href="/arrest" class="arrest">
+                <button class="arrest-button">
+                    Arrest Reports
+                </button>
+            </a>
+
+
+        </div>
+       
+    </div>
+    <div class="footer">
+        <img src="../static/logo.png" height="200" width="200"/>
+        <h1>Done by</h1>
+        <h4>TIRTH VISHALBHAI DAVE</h4>
+        <h4>KANCHARLA NAVEENKUMAR</h4>
+        <h4>PALESHA BASUMATARY</h4>
+        <h4>VIGNESH</h4>
+        
+    </div>
+
+</body>
+</html>
